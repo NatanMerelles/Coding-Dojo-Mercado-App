@@ -1,12 +1,12 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 
-import { StyledContainer, Title, Price, Wrapper } from './styles';
+import { StyledContainer, Title, Price, Wrapper, Infos } from './styles';
 
 
 const Content = ({ }) => (
   <StyledContainer maxWidth={'lg'}>
-    <Grid container spacing={1} alignItems="stretch" style={{ height: '526px' }}>
+    <Grid container spacing={1} justify="space-between" style={{ height: '526px' }}>
       <Grid container item xs={12} lg={4} spacing={3}>
         <img src="https://images7.kabum.com.br/produtos/fotos/85197/85197_index_g.jpg" alt="ssd 128GB" style={{ width: '128px', height: '128px' }} />
       </Grid>
@@ -16,6 +16,7 @@ const Content = ({ }) => (
           <Price>R$ 258</Price>
         </Wrapper>
         <Wrapper>
+          <b>O que você precisa saber sobre esse produto:</b>
           <ul>
             <li>Com tecnologia 3D NAND.</li>
             <li>É útil para salvar programas e documentos com a sua capacidade de 240 GB.</li>
@@ -28,7 +29,9 @@ const Content = ({ }) => (
         </Wrapper>
       </Grid>
       <Grid container item xs={12} lg={4} spacing={3}>
-        teste
+        <Infos>
+          <p>Chegará grátis entre os dias 31 mai. e 4 jun.</p>
+        </Infos>
       </Grid>
     </Grid>
     <Grid>sas</Grid>

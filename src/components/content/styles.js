@@ -22,4 +22,10 @@ const Price = styled.h1`
   font-weight: bold;
 `;
 
-export { StyledContainer, Title, Price, Wrapper }
+const Infos = styled.div`
+  width: 100%;
+  border: 1px solid ${({ theme }) => theme.colors.gray};
+  padding: 20px;
+`;
+
+export { StyledContainer, Title, Price, Wrapper, Infos }
