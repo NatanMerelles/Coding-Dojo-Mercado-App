@@ -23,9 +23,15 @@ const Price = styled.h1`
 `;
 
 const Infos = styled.div`
-  width: 100%;
   border: 1px solid ${({ theme }) => theme.colors.gray};
   padding: 20px;
+  border-radius: 10px;
+  .prediction{
+    color: ${({ theme }) => theme.colors.green};
+  }
+  .stock{
+    font-weight: bold;
+  }
 `;
 
 export { StyledContainer, Title, Price, Wrapper, Infos }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Button } from '@material-ui/core';
 
 import { StyledContainer, Title, Price, Wrapper, Infos } from './styles';
 
@@ -30,7 +30,20 @@ const Content = ({ }) => (
       </Grid>
       <Grid container item xs={12} lg={4} spacing={3}>
         <Infos>
-          <p>Chegará grátis entre os dias 31 mai. e 4 jun.</p>
+          <p className="prediction">Chegará grátis entre os dias 31 mai. e 4 jun.</p>
+          <p className="stock" >Estoque disponível</p>
+          <div className="amount">
+            <label >Quantidade:</label>
+            <input type="text" />
+          </div>
+          <div className="buttons">
+            <Button variant="contained" color="primary">
+              Comprar
+            </Button>
+            <Button variant="contained" color="primary">
+              Adicionar ao carrinho
+            </Button>
+          </div>
         </Infos>
       </Grid>
     </Grid>
