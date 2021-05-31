@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Container } from '@material-ui/core';
+import { Container, Grid } from '@material-ui/core';
 
 const StyledContainer = styled(Container)`
   background-color: ${({ theme }) => theme.colors.white};
@@ -22,16 +22,19 @@ const Price = styled.h1`
   font-weight: bold;
 `;
 
-const Infos = styled.div`
+const Infos = styled(Grid)`
   border: 1px solid ${({ theme }) => theme.colors.gray};
   padding: 20px;
   border-radius: 10px;
-  .prediction{
+  width: 100%;
+
+  .prediction {
     color: ${({ theme }) => theme.colors.green};
   }
-  .stock{
+
+  .stock {
     font-weight: bold;
   }
 `;
 
-export { StyledContainer, Title, Price, Wrapper, Infos }
+export { StyledContainer, Title, Price, Wrapper, Infos };

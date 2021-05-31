@@ -29,18 +29,22 @@ const Content = ({ }) => (
         </Wrapper>
       </Grid>
       <Grid container item xs={12} lg={4} spacing={3}>
-        <Infos>
-          <p className="prediction">Chegará grátis entre os dias 31 mai. e 4 jun.</p>
-          <p className="stock" >Estoque disponível</p>
+        <Infos container item xs={12}>
+          <Grid container item lg={12}>
+            <p className="prediction">Chegará grátis entre os dias 31 mai. e 4 jun.</p>
+          </Grid>
+          <Grid container item lg={12}>
+            <p className="stock" >Estoque disponível</p>
+          </Grid>
           <div className="amount">
             <label >Quantidade:</label>
             <input type="text" />
           </div>
           <div className="buttons">
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" fullWidth>
               Comprar
             </Button>
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" fullWidth>
               Adicionar ao carrinho
             </Button>
           </div>
