@@ -6,7 +6,6 @@ const StyledContainer = styled(Container)`
   background-color: ${({ theme }) => theme.colors.white};
   padding: 20px;
   margin-top: 35px;
-  height: 526px;
 `;
 
 const Title = styled.h1`
