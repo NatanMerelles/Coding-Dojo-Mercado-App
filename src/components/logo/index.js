@@ -1,6 +1,7 @@
 import React from 'react';
+import * as S from './styles'
 
 const Logo = () => {
-  return <p>Mercado</p>
+  return <S.Logo>Mercado</S.Logo>
 }
 export { Logo }

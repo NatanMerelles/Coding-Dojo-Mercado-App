@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components'
 
 import { Container, Grid } from '@material-ui/core';
 
@@ -9,17 +9,41 @@ const StyledContainer = styled(Container)`
 `;
 
 const Title = styled.h1`
-  font-size: 22px;
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    font-weight:  ${theme.font.normal};
+    line-height: 1.5;
+  `}
 `;
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${({ theme }) => css`
+    color: ${theme.colors.black};
+
+    p {
+      font-size: ${theme.font.sizes.mini};
+      font-weight:  ${theme.font.semi};
+    }
+
+    ul {
+      padding: 0;
+      margin-top: ${theme.spacings.mini};
+
+      li {
+        list-style: inside;
+        font-size: ${theme.font.sizes.mini};
+        margin: 8px 0;
+      }
+    }
+  `}
 `;
 
-const Price = styled.h1`
-  font-size: 36px;
-  font-weight: bold;
+const Price = styled.span`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.large};
+    display: block;
+    margin-top: ${theme.spacings.mini};
+  `}
 `;
 
 const Infos = styled(Grid)`

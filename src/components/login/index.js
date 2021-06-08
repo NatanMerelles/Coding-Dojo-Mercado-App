@@ -1,6 +1,6 @@
 import React from 'react';
 
 const Login = () => {
-  return <p>Login</p>
+  return <a href="/">Login</a>
 }
 export { Login }

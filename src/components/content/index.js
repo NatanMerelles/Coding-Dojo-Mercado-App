@@ -6,17 +6,22 @@ import { StyledContainer, Title, Price, Wrapper, Infos } from './styles';
 
 const Content = ({ }) => (
   <StyledContainer maxWidth={'lg'}>
-    <Grid container spacing={1} justify="space-between" style={{ height: '526px' }}>
-      <Grid container item xs={12} lg={4} spacing={3}>
-        <img src="https://images7.kabum.com.br/produtos/fotos/85197/85197_index_g.jpg" alt="ssd 128GB" style={{ width: '128px', height: '128px' }} />
+    <Grid container spacing={4} justify="space-between">
+      <Grid item lg={4}>
+        <img src="https://images7.kabum.com.br/produtos/fotos/85197/85197_index_g.jpg"
+          alt="ssd 128GB" width="100%" />
       </Grid>
-      <Grid container item xs={12} lg={4} spacing={3} direction="column" justify="space-between">
+
+      {/* Container se usa quando quer utilizar a propriedade flex como pai */}
+      <Grid container item lg={5} direction="column" justify="space-between">
         <Wrapper>
-          <Title>Disco sólido interno</Title>
+          <Title>Disco sólido interno Kingston SA400S37/240G 240GB</Title>
           <Price>R$ 258</Price>
         </Wrapper>
+
         <Wrapper>
-          <b>O que você precisa saber sobre esse produto:</b>
+          <p>O que você precisa saber sobre esse produto:</p>
+
           <ul>
             <li>Com tecnologia 3D NAND.</li>
             <li>É útil para salvar programas e documentos com a sua capacidade de 240 GB.</li>
@@ -28,7 +33,8 @@ const Content = ({ }) => (
           </ul>
         </Wrapper>
       </Grid>
-      <Grid container item xs={12} lg={4} spacing={3}>
+
+      <Grid item lg={3}>
         <Infos container item xs={12}>
           <Grid container item lg={12}>
             <p className="prediction">Chegará grátis entre os dias 31 mai. e 4 jun.</p>
