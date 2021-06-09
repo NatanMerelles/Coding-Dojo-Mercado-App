@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledHeader, StyleInput, StyleLogin } from './styles';
+import { StyledHeader, StyledInput, StyleLogin } from './styles';
 import { SInput, Logo, Login } from '../../components';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -15,7 +15,9 @@ const Header = () => (
       >
         <Logo />
 
-        <SInput />
+        <StyledInput>
+          <SInput />
+        </StyledInput>
 
         <StyleLogin>
           <Login />

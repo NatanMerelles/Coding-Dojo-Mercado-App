@@ -2,13 +2,13 @@ import styled, { css } from 'styled-components'
 
 import { Container, Grid } from '@material-ui/core';
 
-const StyledContainer = styled(Container)`
+export const StyledContainer = styled(Container)`
   background-color: ${({ theme }) => theme.colors.white};
   padding: 20px;
   margin-top: 35px;
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
     font-weight:  ${theme.font.normal};
@@ -16,7 +16,7 @@ const Title = styled.h1`
   `}
 `;
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.black};
 
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
   `}
 `;
 
-const Price = styled.span`
+export const Price = styled.span`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.large};
     display: block;
@@ -46,19 +46,72 @@ const Price = styled.span`
   `}
 `;
 
-const Infos = styled(Grid)`
-  border: 1px solid ${({ theme }) => theme.colors.gray};
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
+export const Infos = styled(Grid)`
+  ${({ theme }) => css`
+    border: 1px solid ${theme.colors.gray};
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
 
-  .prediction {
-    color: ${({ theme }) => theme.colors.green};
-  }
+    .prediction {
+      color: ${theme.colors.green};
+      line-height: 1.5;
+      font-weight: ${theme.font.bold};
+    }
 
-  .stock {
-    font-weight: bold;
-  }
+    .stock {
+      font-weight: ${theme.font.bold};
+      margin: ${theme.spacings.small} 0;
+    }
+
+    .amount {
+      margin-bottom: ${theme.spacings.small};
+
+      input {
+        background: #EDEDED;
+        border: none;
+        flex-basis: 104px;
+        max-width: 104px;
+        border-radius: 10px;
+        margin-left: ${theme.spacings.small};
+        padding: ${theme.spacings.mini};
+        font-weight: ${theme.font.bold};
+      }
+    }
+
+    .buttons {
+      button {
+        padding: ${theme.spacings.mini};
+        border-radius: 10px;
+
+        &:first-child {
+          margin-bottom: ${theme.spacings.mini};
+        }
+      }
+    }
+  `}
 `;
 
-export { StyledContainer, Title, Price, Wrapper, Infos };
+export const Description = styled.div`
+  ${({ theme }) => css`
+    padding: ${theme.spacings.xsmall} 0;
+    margin: ${theme.spacings.mini} 0;
+    border-top: 1px solid #00000020;
+
+    h3 {
+      margin-bottom: ${theme.spacings.small};
+      color: ${theme.colors.black};
+    }
+
+    p {
+      line-height: 1.5;
+
+      &:first-child {
+        margin: 0 0 ${theme.spacings.mini};
+      }
+    }
+  `}
+`;
+
+
+// export { StyledContainer, Title, Price, Wrapper, Infos, Description };

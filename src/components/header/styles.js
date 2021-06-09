@@ -6,10 +6,19 @@ export const StyledHeader = styled.header`
   background: ${({ theme }) => theme.colors.yellow};
 `;
 
-export const StyleInput = styled(Input)`
-  .MuiInput-input {
-    background: ${({ theme }) => theme.colors.white};
-  }
+export const StyledInput = styled(Input)`
+    && {
+      &:before {
+        display: none;
+      }
+      
+      .MuiInput-input {
+        background: ${({ theme }) => theme.colors.white};
+        border: none;
+        padding: 5px 10px;
+        width: 545px;;
+      }
+    }
 `;
 
 export const StyleLogin = styled.div`
